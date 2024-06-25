@@ -20,7 +20,7 @@ func flock(db *DB, exclusive bool, timeout time.Duration) error {
 	if timeout != 0 {
 		t = time.Now()
 	}
-	fd := db.file.Fd()
+	// fd := db.file.Fd()
 	flag := syscall.LOCK_NB
 	if exclusive {
 		flag |= syscall.LOCK_EX
@@ -29,12 +29,12 @@ func flock(db *DB, exclusive bool, timeout time.Duration) error {
 	}
 	for {
 		// Attempt to obtain an exclusive lock.
-		err := syscall.Flock(int(fd), flag)
-		if err == nil {
-			return nil
-		} else if err != syscall.EWOULDBLOCK {
-			return err
-		}
+		// err := syscall.Flock(int(fd), flag)
+		// if err == nil {
+		// 	return nil
+		// } else if err != syscall.EWOULDBLOCK {
+		// 	return err
+		// }
 
 		// If we timed out then return an error.
 		if timeout != 0 && time.Since(t) > timeout-flockRetryTimeout {
