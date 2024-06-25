@@ -1,4 +1,4 @@
-module go.etcd.io/bbolt
+module github.com/MPCherry/bbolt
 
 go 1.22
 
