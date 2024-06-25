@@ -7,9 +7,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"go.etcd.io/bbolt"
-	"go.etcd.io/bbolt/errors"
-	"go.etcd.io/bbolt/internal/btesting"
+	"github.com/MPCherry/bbolt"
+	"github.com/MPCherry/bbolt/errors"
+	"github.com/MPCherry/bbolt/internal/btesting"
 
 	"github.com/stretchr/testify/require"
 )

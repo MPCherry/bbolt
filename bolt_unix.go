@@ -11,7 +11,7 @@ import (
 
 	"golang.org/x/sys/unix"
 
-	"go.etcd.io/bbolt/errors"
+	"github.com/MPCherry/bbolt/errors"
 )
 
 // flock acquires an advisory lock on a file descriptor.

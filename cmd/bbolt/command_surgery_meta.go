@@ -10,7 +10,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 
-	"go.etcd.io/bbolt/internal/common"
+	"github.com/MPCherry/bbolt/internal/common"
 )
 
 const (

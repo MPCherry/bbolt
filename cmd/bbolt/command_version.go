@@ -5,7 +5,7 @@ import (
 	"runtime"
 
 	"github.com/spf13/cobra"
-	"go.etcd.io/bbolt/version"
+	"github.com/MPCherry/bbolt/version"
 )
 
 func newVersionCommand() *cobra.Command {

@@ -7,7 +7,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	bolt "go.etcd.io/bbolt"
+	bolt "github.com/MPCherry/bbolt"
 )
 
 func newInspectCommand() *cobra.Command {

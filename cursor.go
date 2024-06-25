@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"sort"
 
-	"go.etcd.io/bbolt/errors"
-	"go.etcd.io/bbolt/internal/common"
+	"github.com/MPCherry/bbolt/errors"
+	"github.com/MPCherry/bbolt/internal/common"
 )
 
 // Cursor represents an iterator that can traverse over all key/value pairs in a bucket

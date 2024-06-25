@@ -8,9 +8,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	bolt "go.etcd.io/bbolt"
-	"go.etcd.io/bbolt/errors"
-	"go.etcd.io/bbolt/internal/btesting"
+	bolt "github.com/MPCherry/bbolt"
+	"github.com/MPCherry/bbolt/errors"
+	"github.com/MPCherry/bbolt/internal/btesting"
 	gofail "go.etcd.io/gofail/runtime"
 )
 

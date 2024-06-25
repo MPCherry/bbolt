@@ -21,10 +21,10 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	bolt "go.etcd.io/bbolt"
-	berrors "go.etcd.io/bbolt/errors"
-	"go.etcd.io/bbolt/internal/common"
-	"go.etcd.io/bbolt/internal/guts_cli"
+	bolt "github.com/MPCherry/bbolt"
+	berrors "github.com/MPCherry/bbolt/errors"
+	"github.com/MPCherry/bbolt/internal/common"
+	"github.com/MPCherry/bbolt/internal/guts_cli"
 )
 
 var (
