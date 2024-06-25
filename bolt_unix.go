@@ -10,8 +10,6 @@ import (
 	"unsafe"
 
 	"golang.org/x/sys/unix"
-
-	"github.com/MPCherry/bbolt/errors"
 )
 
 // flock acquires an advisory lock on a file descriptor.
@@ -35,14 +33,15 @@ func flock(db *DB, exclusive bool, timeout time.Duration) error {
 		// } else if err != syscall.EWOULDBLOCK {
 		// 	return err
 		// }
-
+		
+		return nil
 		// If we timed out then return an error.
-		if timeout != 0 && time.Since(t) > timeout-flockRetryTimeout {
-			return errors.ErrTimeout
-		}
+		// if timeout != 0 && time.Since(t) > timeout-flockRetryTimeout {
+		// 	return errors.ErrTimeout
+		// }
 
-		// Wait for a bit and try again.
-		time.Sleep(flockRetryTimeout)
+		// // Wait for a bit and try again.
+		// time.Sleep(flockRetryTimeout)
 	}
 }
 
